@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import TimeDisplay from "./components/TimeDisplay/TimeDisplay";
-import Button from './components/Buttons/Button';
+import TimeDisplay from './Components/TimeDisplay/TimeDisplay';
+import Button from './Components/Buttons/Button';
+import Container from './Components/Container/Container';
 
 const App = () => {
 
@@ -33,12 +34,12 @@ const App = () => {
   };
 
   return (
-    <div>
+    <Container>
       <TimeDisplay time={currentTime}/>
       <Button onClick={handleStartClick}>Start</Button>
       <Button onClick={handleStopClick}>Stop</Button>
       <Button onClick={handleResetClick}>Reset</Button>
-    </div>
+    </Container>
   );
 }
 
